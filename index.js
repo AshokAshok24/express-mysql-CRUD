@@ -1,18 +1,29 @@
 const express=require('express');
 const app=express();
-const mysql=require('mysql2');
-
+const dbconnection = require('./helpers/config');
+require('dotenv').config()
 
 app.use(express.json());
 
 
 
 app.get('/',(req,res)=>{
-    res.send("Hii Hello")
+    
+    dbconnection.query(`select * from users`,(err,result)=>{
+        res.send(result)
+    })
 })
 
+// For User Controller
+
+const users=require('./controller/usercontroller/users');
+app.use('/users',users)
 
 
-app.listen(1000,()=>{
-    console.log("Server Running in the port 1000");
+
+const port=process.env.PORT
+// For Listining the server
+
+app.listen(port,()=>{
+    console.log(`Server Running in the port http://localhost:${port}`);
 })
