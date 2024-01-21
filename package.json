@@ -1,0 +1,28 @@
+{
+  "name": "express-mysql-crud",
+  "version": "1.0.0",
+  "description": "This is Mysql CRUD with ExpressJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshokAshok24/express-mysql-CRUD.git"
+  },
+  "author": "Ashokkumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AshokAshok24/express-mysql-CRUD/issues"
+  },
+  "homepage": "https://github.com/AshokAshok24/express-mysql-CRUD#readme",
+  "dependencies": {
+    "dotenv": "^16.3.2",
+    "express": "^4.18.2",
+    "mysql2": "^3.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
